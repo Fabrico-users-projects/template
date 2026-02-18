@@ -1,0 +1,73 @@
+# --- DEPENDENCIES & RUNTIMES ---
+node_modules/
+.pnp
+.pnp.js
+.pnpm-debug.log*
+
+# Bun
+.bun/
+bun.lockb
+http_client_res.dump
+
+# --- CONFIG & SENSITIVE CREDENTIALS ---
+# Prevents leaking registry tokens or proxy settings
+.npmrc
+.npm
+.yarnrc
+.yarnrc.yml
+.pnpmfile.cjs
+
+# --- EXPO & METRO ---
+.expo/
+dist/
+web-build/
+dev-client-builds/
+.metro-health-check*
+expo-env.d.ts
+
+# --- ENVIRONMENT & SECRETS ---
+.env
+.env.*
+!.env.example
+*.pem
+*.crt
+*.key
+
+# --- NATIVE (Android/iOS) ---
+android/
+ios/
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*
+*.apk
+*.aab
+*.ipa
+*.bundle
+
+# --- SYSTEM & IDE ---
+.DS_Store
+.DS_Store?
+._*
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- DEBUG & LOGS ---
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+core.*
+
+# --- TYPESCRIPT & BUILD ---
+*.tsbuildinfo
+out/
+build/
+
+# --- AGENT SPECIFIC ---
+notes.txt
+*.tmp
+temp/
