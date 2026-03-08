@@ -26,9 +26,6 @@ dev-client-builds/
 expo-env.d.ts
 
 # --- ENVIRONMENT & SECRETS ---
-.env
-.env.*
-!.env.example
 *.pem
 *.crt
 *.key
