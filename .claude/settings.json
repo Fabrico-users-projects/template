@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command' | { read -r cmd; echo \"$cmd\" | grep -q 'shadcn' || exit 0; [ -d src/components ] || exit 0; cp -rn src/components/. src/react-app/components/ && rm -rf src/components; } 2>/dev/null || true",
+            "statusMessage": "Relocating shadcn components to src/react-app/components/..."
+          }
+        ]
+      }
+    ]
+  }
+}
