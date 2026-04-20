@@ -6,25 +6,5 @@
   "upload_source_maps": true,
   "observability": {
     "enabled": true
-  },
-  "vars": {
-    "DATABASE_URL": "postgresql://neondb_owner:npg_uX3bvUrJRx9L@ep-gentle-wildflower-am78mctr-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
-  },
-  "kv_namespaces": [
-    {
-      "binding": "KV",
-      "id": "78b4136f30a047d4b57f682b20db1f90",
-      "remote": true
-    }
-  ],
-  "r2_buckets": [
-    {
-      "binding": "R2",
-      "bucket_name": "lingering-hall-1557-r2",
-      "remote": true
-    }
-  ],
-  "triggers": {
-    "crons": ["* * * * *"]
   }
 }

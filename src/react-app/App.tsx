@@ -1,4 +1,3 @@
-import { Button } from "./components/ui/button";
 
 function App() {
 	return (
@@ -16,7 +15,6 @@ function App() {
 						Describe what you want to build in the chat and Fabrico will
 						generate your frontend, backend, and AI layer.
 					</p>
-					{/* <Button>Button</Button> */}
 				</div>
 			</div>
 		</div>

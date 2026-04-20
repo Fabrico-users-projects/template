@@ -1,7 +1,10 @@
-import { pgTable, text, timestamp } from 'drizzle-orm/pg-core'
+import { pgSchema, uuid, text, timestamp } from 'drizzle-orm/pg-core'
 
-export const example = pgTable('example', {
-  id: text('id').primaryKey().$defaultFn(() => crypto.randomUUID()),
-  name: text('name').notNull(),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
+const neonAuth = pgSchema('neon_auth')
+
+export const authUsers = neonAuth.table('users_sync', {
+  id: uuid('id').primaryKey(),
+  email: text('email'),
+  name: text('name'),
+  createdAt: timestamp('created_at'),
 })
