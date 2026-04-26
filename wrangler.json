@@ -6,5 +6,31 @@
   "upload_source_maps": true,
   "observability": {
     "enabled": true
-  }
+  },
+  "services": [
+    {
+      "binding": "STORAGE",
+      "service": "fabrico-supervisor",
+      "entrypoint": "FabricoStorage",
+      "props": {
+        "projectId": "309f1e5a-1f54-474f-88ed-46c82f971722"
+      }
+    },
+    {
+      "binding": "SOCKET",
+      "service": "fabrico-supervisor",
+      "entrypoint": "FabricoSocket",
+      "props": {
+        "projectId": "309f1e5a-1f54-474f-88ed-46c82f971722"
+      }
+    },
+    {
+      "binding": "AI",
+      "service": "fabrico-supervisor",
+      "entrypoint": "FabricoAI",
+      "props": {
+        "projectId": "309f1e5a-1f54-474f-88ed-46c82f971722"
+      }
+    }
+  ]
 }
