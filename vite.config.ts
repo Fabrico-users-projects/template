@@ -5,7 +5,17 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  plugins: [tailwindcss(), react(), cloudflare()],
+  plugins: [
+    tailwindcss(),
+    react(),
+    cloudflare({
+      auxiliaryWorkers: [
+        {
+          configPath: '../fabrico-supervisor/wrangler.jsonc'
+        }
+      ]
+    })
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src/react-app"),
