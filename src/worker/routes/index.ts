@@ -1,11 +1,10 @@
 import { OpenAPIHono } from '@hono/zod-openapi'
 import hello from './hello'
-import ai from './ai'
+import chat from './chat'
 
 const routes = new OpenAPIHono<{ Bindings: Env }>()
 
 routes.route('/hello-Fabrico', hello)
-
-routes.route('/ai', ai)
+routes.route('/chat', chat)
 
 export { routes }
