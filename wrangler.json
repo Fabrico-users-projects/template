@@ -7,26 +7,27 @@
   "observability": {
     "enabled": true
   },
-  "services": [
-    {
-      "binding": "SUPERVISOR",
-      "service": "fabrico-supervisor"
-    },
+  "r2_buckets": [
     {
       "binding": "STORAGE",
-      "service": "fabrico-supervisor",
-      "entrypoint": "FabricoStorage",
-      "props": {
-        "projectId": "309f1e5a-1f54-474f-88ed-46c82f971722"
-      }
-    },
-    {
-      "binding": "SOCKET",
-      "service": "fabrico-supervisor",
-      "entrypoint": "FabricoSocket",
-      "props": {
-        "projectId": "309f1e5a-1f54-474f-88ed-46c82f971722"
-      }
+      "bucket_name": "fabrico-storage"
     }
-  ]
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "SOCKET",
+        "class_name": "FabricoSocket"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": ["FabricoSocket"]
+    }
+  ],
+  "dev": {
+    "persist": true
+  }
 }
