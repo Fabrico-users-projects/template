@@ -9,11 +9,6 @@ export default defineConfig({
     tailwindcss(),
     react(),
     cloudflare({
-      auxiliaryWorkers: [
-        {
-          configPath: '../fabrico-supervisor/wrangler.jsonc'
-        }
-      ]
     })
   ],
   resolve: {

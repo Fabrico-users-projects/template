@@ -26,8 +26,5 @@
       "tag": "v1",
       "new_classes": ["FabricoSocket"]
     }
-  ],
-  "dev": {
-    "persist": true
-  }
+  ]
 }
