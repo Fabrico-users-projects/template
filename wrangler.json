@@ -1,30 +1,18 @@
 {
-  "name": "lingering-hall-1557",
-  "main": "./src/worker/index.ts",
-  "compatibility_date": "2026-04-22",
-  "compatibility_flags": ["nodejs_compat"],
-  "upload_source_maps": true,
-  "observability": {
-    "enabled": true
-  },
-  "r2_buckets": [
-    {
-      "binding": "STORAGE",
-      "bucket_name": "fabrico-storage"
-    }
-  ],
-  "durable_objects": {
-    "bindings": [
-      {
-        "name": "SOCKET",
-        "class_name": "FabricoSocket"
-      }
-    ]
-  },
-  "migrations": [
-    {
-      "tag": "v1",
-      "new_classes": ["FabricoSocket"]
-    }
-  ]
+	"name": "lingering-hall-1557",
+	"main": "./src/worker/index.ts",
+	"compatibility_date": "2026-04-22",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"upload_source_maps": true,
+	"observability": {
+		"enabled": true
+	},
+	"r2_buckets": [
+		{
+			"binding": "STORAGE",
+			"bucket_name": "fabrico-storage"
+		}
+	]
 }

@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 function App() {
 
   return (
@@ -11,6 +9,7 @@ function App() {
         <p className="text-muted-foreground text-base">
           Your app will appear here
         </p>
+        {import.meta.env.VITE_NEON_AUTH_URL}
       </div>
     </div>
   )
