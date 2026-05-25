@@ -7,7 +7,8 @@ declare namespace Cloudflare {
 	}
 	interface Env {
 		STORAGE: R2Bucket;
-		VITE_NEON_AUTH_URL: string;
+		FABRICO_PUBLISHABLE_KEY: string;
+		FABRICO_API_KEY: string;
 	}
 }
 interface Env extends Cloudflare.Env {}
@@ -15,7 +16,7 @@ type StringifyValues<EnvType extends Record<string, unknown>> = {
 	[Binding in keyof EnvType]: EnvType[Binding] extends string ? EnvType[Binding] : string;
 };
 declare namespace NodeJS {
-	interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "VITE_NEON_AUTH_URL">> {}
+	interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "FABRICO_PUBLISHABLE_KEY" | "FABRICO_API_KEY">> {}
 }
 
 // Begin runtime types

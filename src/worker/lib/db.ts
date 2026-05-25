@@ -1,10 +1,7 @@
-import { neon } from '@neondatabase/serverless'
-import { drizzle } from 'drizzle-orm/neon-http'
-import * as schema from './schema'
-import { env } from 'cloudflare:workers'
+import { getFabrico } from './fabrico'
+import { createFabricoDrizzle } from 'fabrico-sdk/drizzle'
 
-export function createDb() {
-  const databaseUrl = env.DATABASE_URL
-  const sql = neon(databaseUrl)
-  return drizzle(sql, { schema })
+export function createDb(env: Env) {
+  const fabrico = getFabrico(env)
+  return createFabricoDrizzle(fabrico) as any
 }
