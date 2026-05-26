@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ai-sdk/openai-compatible": "^2.0.41",
+    "@fabrico/sdk": "^1.0.0",
     "@hono/swagger-ui": "^0.6.1",
     "@hono/zod-openapi": "^1.3.0",
     "@radix-ui/react-collapsible": "^1.1.12",
@@ -24,7 +25,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.2",
-    "fabrico-sdk": "link:../fabrico-services/sdk",
     "hono": "^4.12.12",
     "input-otp": "^1.4.2",
     "lucide-react": "^1.8.0",

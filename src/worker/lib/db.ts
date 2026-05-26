@@ -1,5 +1,5 @@
+import { createFabricoDrizzle } from '@fabrico/sdk'
 import { getFabrico } from './fabrico'
-import { createFabricoDrizzle } from 'fabrico-sdk/drizzle'
 
 export function createDb(env: Env) {
   const fabrico = getFabrico(env)

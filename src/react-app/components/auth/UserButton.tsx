@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useFabrico } from "fabrico-sdk/react";
+import { useFabrico } from "@fabrico/sdk/react";
 
 export function UserButton({ afterSignOutUrl = "/" }: { afterSignOutUrl?: string }) {
   const { user, isLoaded, signOut } = useFabrico();
