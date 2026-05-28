@@ -6,11 +6,11 @@ const app = new OpenAPIHono<{ Bindings: Env }>()
 
 app.route('/api', routes)
 
-app.get('/ui', swaggerUI({ url: '/doc' }))
+app.get('/api/docs', swaggerUI({ url: '/api/openapi.json' }))
 
-app.doc('/doc', {
-  openapi: '3.0.0',
-  info: { version: '1.0.0', title: 'Diali API' },
+app.doc('/api/openapi.json', {
+	openapi: '3.0.0',
+	info: { version: '1.0.0', title: 'Fabrico API' },
 })
 
 export default app
