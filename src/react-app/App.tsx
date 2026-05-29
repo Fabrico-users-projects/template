@@ -1,18 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import { FabricoProvider } from "@fabrico/sdk/react";
+import { fabrico } from "./lib/fabrico";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Main Dashboard Welcome Page */}
-        <Route path="/" element={<Home />} />
+    <FabricoProvider client={fabrico}>
+      <BrowserRouter>
+        <Routes>
+          {/* Main Dashboard Welcome Page */}
+          <Route path="/" element={<Home />} />
 
-        {/* Catch-all 404 Route */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+          {/* Add others Routes Here */}
+
+          {/* Catch-all 404 Route */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </FabricoProvider>
   );
 }
 
