@@ -1,4 +1,3 @@
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center gap-6 p-8">
@@ -9,8 +8,6 @@ export default function Home() {
         <p className="text-muted-foreground text-base">
           Your app will appear here
         </p>
-      </div>
-      <div className="flex gap-4 items-center">
       </div>
     </div>
   );

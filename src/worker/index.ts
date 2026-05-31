@@ -1,8 +1,15 @@
 import { OpenAPIHono } from '@hono/zod-openapi'
 import { swaggerUI } from '@hono/swagger-ui'
 import { routes } from './routes'
+import { createFabricoAuthHandler } from "@fabrico/sdk/server";
+import { getFabrico } from './lib/fabrico';
 
 const app = new OpenAPIHono<{ Bindings: Env }>()
+
+/**
+ * This is proxy routes handler of Fabrico builtin auth
+ */
+app.route("/api/auth", createFabricoAuthHandler((c: any) => getFabrico(c.env)));
 
 app.route('/api', routes)
 
