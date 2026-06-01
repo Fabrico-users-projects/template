@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { useFabrico } from "@fabrico/sdk/react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 
 export function SignIn({ redirectTo = "/" }: { redirectTo?: string }) {
