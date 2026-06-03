@@ -2,6 +2,7 @@ import { OpenAPIHono } from '@hono/zod-openapi'
 import { swaggerUI } from '@hono/swagger-ui'
 import { routes } from './routes'
 
+
 const app = new OpenAPIHono<{ Bindings: Env }>()
 
 app.route('/api', routes)
