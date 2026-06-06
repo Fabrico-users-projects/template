@@ -34,7 +34,6 @@ A highly modularized directory layout separating frontend concerns from edge-nat
 │       ├── lib/                # Backend utilities
 │       │   └── fabrico.ts      # Server-side SDK client (API Key + DB/AI access)
 │       ├── routes/             # API Endpoint definitions
-│       │   ├── hello.ts        # Sample Zod-OpenAPI route
 │       │   └── index.ts        # Route registry and orchestration
 │       └── index.ts            # Hono application entry & Swagger setup
 │
